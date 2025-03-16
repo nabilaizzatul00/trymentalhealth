@@ -25,6 +25,10 @@ def main():
 if st.button('Predict'):
   result = model.predict(inputs)
   updated_res = result.flatten().astype(int)
+  if updated_res == 0:
+    st.write("YESYESYES")
+  elif updated_res == 1:
+    st.write("NONONO")
 
 if _ _name__ =='__main__':
   main()
